@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="css/DPlayer.min.css">
+  <style>
+  *{
+	margin:0px;
+	padding:0px;
+  }
+  #dplayer{
+  width:90%;
+  higth:900px;
+  margin:auto;
+  }
+
+  #text{
+  width:90%;
+  higth:50px;
+  margin:auto;
+  }
+  #text p{
+   color:red;
+  }
+
+  </style>
+  <title>Test</title>
+ </head>
+ <body>
+ <div id="text"><p>Test</p><div>
+ <div id="dplayer"></div>
+ <script src="js/DPlayer.min.js"></script>
+ <script src="js/hls.min.js"></script>
+ <script>
+ const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    screenshot: false,
+	video: {
+		//此处为你的推流地址
+        url: 'live/livestream.m3u8',
+		//thumbnails: 'thumbnails.jpg',
+        type: 'hls'
+    }
+});
+ </script>
+ </body>
+</html>
